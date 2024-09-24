@@ -24,7 +24,7 @@ const Header = () => {
         {/* <Chip label='Currently building an application'></Chip> */}
 
         {hoveredElement === 'Australia' && (
-          <Box className='kangaroo-burst-animation' sx={{ right: '25%', top: '55%' }}></Box>
+          <Box className='kangaroo-burst-animation' sx={{ right: '25%', top: '45%' }}></Box>
         )}
         {hoveredElement === 'crafting code' && (
           <Box className='code-burst-animation'></Box>
