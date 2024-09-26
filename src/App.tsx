@@ -18,7 +18,18 @@ function App() {
   const theme =  createTheme({
     palette: {
       mode: darkMode ? 'dark':'light',
-      background: { default: darkMode ? '#041124':'white'},
+      primary: {
+        main: darkMode ? '#18ffff' : '#5733FF'
+      },
+      background: {
+        default: darkMode ? '#041124':'white'},
+      text: {
+        primary: darkMode ? '#ffffff' : '#000000',  // Text color
+        secondary: darkMode ? '#ffffff' : '#333333',  // Secondary text
+      },
+    },
+    typography: {
+      fontFamily: `"Poppins", "DM Mono", sans-serif`,  // Custom fonts
     },
   })
 
@@ -26,9 +37,13 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Container sx={{padding: '35px 10px', maxWidth: '1400px', margin:'auto'}}>
+        <Container sx={{
+                  padding: { xs: '20px 5px', md: '35px 10px' },
+                  maxWidth: { xs: '100%', md: '90%', lg: '1400px' },
+                  margin:'auto',
+          }}>
           <CustomCursor />
-          <Grid2 direction="column" alignItems="center" justifyContent="center"  >
+          <Grid2 size="auto" direction="column" alignItems="center" justifyContent="center"  >
               <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
               <Header />
               <Background />

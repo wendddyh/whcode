@@ -2,7 +2,10 @@ import { Box, Container, Typography } from "@mui/material";
 
 const Background = () => {
   return (
-    <Container sx={{padding: '20vh 10vh', maxWidth: '1400px', margin:'auto'}}>
+    <Container sx={{ paddingTop: { xs: '6vh', md: '10vh', lg:'28vh'},
+              maxWidth: '1400px',
+              margin: 'auto'
+              }}>
       <Box sx={{maxWidth: '1000px'}}>
         <Typography sx={{fontFamily: `"DM Mono", monospace`, fontWeight:500, fontSize:'1.5em', color:'#18ffff'}}>
           Background
