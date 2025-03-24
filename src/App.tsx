@@ -1,12 +1,12 @@
 import './App.css'
 import { Container, createTheme, CssBaseline, Grid2, ThemeProvider} from '@mui/material'
 import Header from './components/Header'
-import Background from './components/Background'
 import Projects from './components/Projects'
 import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import CustomCursor from './components/CustomCursor'
+
 
 function App() {
   const [ darkMode, setDarkMode ] = useState(true);
@@ -22,14 +22,14 @@ function App() {
         main: darkMode ? '#18ffff' : '#5733FF'
       },
       background: {
-        default: darkMode ? '#041124':'white'},
-      text: {
-        primary: darkMode ? '#ffffff' : '#000000',  // Text color
+        default: '#041124'},
+       text: {
+         primary: darkMode ? '#ffffff' : '#000000',  // Text color
         secondary: darkMode ? '#ffffff' : '#333333',  // Secondary text
       },
     },
     typography: {
-      fontFamily: `"Poppins", "DM Mono", sans-serif`,  // Custom fonts
+     fontFamily: `"Poppins", "DM Mono", sans-serif`,  // Custom fonts
     },
   })
 
@@ -44,11 +44,10 @@ function App() {
           }}>
           <CustomCursor />
           <Grid2 size="auto" direction="column" alignItems="center" justifyContent="center"  >
-              <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-              <Header />
-              <Background />
-              <Projects />
-              <Footer />
+              <Navbar darkMode={true} toggleDarkMode={toggleDarkMode}  />
+                <Header />
+                <Projects />
+                <Footer />
           </Grid2>
         </Container>
       </ThemeProvider>

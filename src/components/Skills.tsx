@@ -13,7 +13,7 @@ const skills = [
   },
   {
     type: "Tools",
-    tools: ["Git & Github", "Bash", " Jira", "Visual Studi Code"]
+    tools: ["Github", "Bash", " Jira", "Visual Studio Code"]
   }
 ]
 
